@@ -1,0 +1,53 @@
+//Decompose a problem into multiple functions
+
+#include <stdio.h>
+void printLine(int nCols,char character);
+void printRectangle(int nLines,int nCols,char character);
+void printTriangle(int nLines,char character);
+
+int main(void)
+{
+    int numColom;
+    int numLine;
+    printf("How many coloum would you like?");
+    scanf("%d",&numColom);
+    printLine(numColom,'?');
+    
+    
+    printf("\nHow many lines would you like?");
+    scanf("%d",&numLine);
+    printTriangle(numLine,')');
+     printf("\n");
+    printRectangle(numLine,numColom,'*');
+    printf("\n");
+   
+}
+void printLine(int nCols,char character)
+{
+    int i;
+    for (i=0;i<nCols;i++)
+    {
+        printf("%c",character);
+    }
+    printf("\n");
+}
+void printRectangle(int nLines,int nCols,char character)
+{
+    int i;
+    for (i=0;i<nLines;i++)
+       {
+           printLine(nCols,character);
+       }
+}
+void printTriangle(int nLines,char character)
+{
+    int i,j;
+    for (i=0;i<nLines;i++)
+    {
+            j=i+1;
+            printLine(j,character);
+        
+    }
+}
+
+
