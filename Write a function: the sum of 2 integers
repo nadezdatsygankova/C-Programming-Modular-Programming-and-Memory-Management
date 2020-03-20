@@ -1,0 +1,17 @@
+//Function sum of two integers
+
+int sum (int x,int y)
+{
+    int result;
+    result = x+y;
+    return result;
+}
+int main(void)
+{
+    int a,b;
+    int result;
+    printf("Enter two integers:");
+    scanf("%d%d",&a,&b);
+    result = sum(a,b);
+    printf("Result of %d + %d = %d",a,b,result);
+}
