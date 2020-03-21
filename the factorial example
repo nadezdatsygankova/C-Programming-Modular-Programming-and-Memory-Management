@@ -1,0 +1,21 @@
+//the factorial example
+
+
+#include <stdio.h>
+//5!=1*2*3*4*5
+//n!=1*2*..*(n-1)*n
+int main(void){
+    int i,n,fact;
+    printf("Enter a positive number: ");
+    scanf("%d",&n);
+    if (n<0)
+    {
+        printf("%d is not positive number", n);
+    }
+    fact=1;
+    for (i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("!%d is %d", n, fact);
+}
