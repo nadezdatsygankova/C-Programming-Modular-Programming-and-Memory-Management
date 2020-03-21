@@ -1,0 +1,43 @@
+
+
+#include <stdio.h>
+ int min(int a, int b);
+ int main(void){
+     int number=0;
+     int i;
+     int j;
+     int k;
+     int next;
+     int opt;
+     int entermin =0;
+     scanf("%d",&number);
+     int list[number];
+
+     for (i=0;i<number;i++)
+     {
+         scanf("%d",&list[i]);
+     }
+
+     for (j=0;j<1;j++){
+         
+         {
+             entermin=min(min(list[j],list[j+1]),min(list[j+2],list[j+3]));
+            // next=min(list[j+2],list[j+3]);
+            // opt=min(entermin,next);
+         }
+        
+     }
+     printf("%d",entermin);
+     
+     
+
+ }
+int min(int a,int b)
+{
+    int min;
+       if (a<b){
+          min=a;}
+       else{
+          min=b;}
+    return min;      
+}
